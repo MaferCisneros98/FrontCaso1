@@ -17,7 +17,6 @@ export class MenuComponent implements OnInit {
   constructor(private tokenService: TokenService) { }
 
   ngOnInit() {
-    console.log(this.isAdmin)
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {

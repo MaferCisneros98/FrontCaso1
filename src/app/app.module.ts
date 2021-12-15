@@ -9,8 +9,9 @@ import { NuevoProductoComponent } from './producto/nuevo-producto.component';
 import { EditarProductoComponent } from './producto/editar-producto.component';
 import { interceptorProvider } from './interceptors/prod-interceptor.service';
 
+
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 // external
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -52,7 +53,8 @@ import { CreateUsersComponent } from './admin/create-users/create-users.componen
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]
