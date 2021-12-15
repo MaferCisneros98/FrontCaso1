@@ -21,6 +21,9 @@
           <a class="nav-link" routerLink="/nuevo" *ngIf="isTaller" ><i class="far fa-list-alt" ></i> Taller</a>
         </li>
         <li class="nav-item" *ngIf="isLogged" >
+          <a class="nav-link" routerLink="/users" *ngIf="isAdmin" ><i class="fas fa-users" ></i> Gestion de Usuarios</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged" >
           <a class="nav-link" routerLink="/detalle" *ngIf="isConcesionaria" ><i class="far fa-list-alt" ></i> Detalle</a>
         </li>
         <li class="nav-item" *ngIf="!isLogged">

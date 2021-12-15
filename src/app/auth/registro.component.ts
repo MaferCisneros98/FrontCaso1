@@ -17,6 +17,7 @@ export class RegistroComponent implements OnInit {
   nombreUsuario: string;
   email: string;
   password: string;
+  rol: string[];
   errMsj: string;
   isLogged = false;
 
@@ -35,6 +36,7 @@ export class RegistroComponent implements OnInit {
 
   onRegister(): void {
     this.nuevoUsuario = new NuevoUsuario(this.nombre, this.nombreUsuario, this.email, this.password);
+    console.log(this.nuevoUsuario);
     this.authService.nuevo(this.nuevoUsuario).subscribe(
       data => {
         this.toastr.success('Cuenta Creada', 'OK', {

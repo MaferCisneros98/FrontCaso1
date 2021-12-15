@@ -24,6 +24,7 @@ import { InformeRechazoComponent } from './comercializadora/informe-rechazo/info
 import { VerificacionDocumentosComponent } from './comercializadora/verificacion-documentos/verificacion-documentos.component';
 import { ComercializadoraAceptacionComponent } from './comercializadora-aceptacion/comercializadora-aceptacion.component';
 import { ComercializadoraCorreoComponent } from './comercializadora-correo/comercializadora-correo.component';
+import { CreateUsersComponent } from './admin/create-users/create-users.component';
 
 
 
@@ -42,7 +43,8 @@ import { ComercializadoraCorreoComponent } from './comercializadora-correo/comer
     VerificacionDocumentosComponent,
     InformeRechazoComponent,
     ComercializadoraAceptacionComponent,
-    ComercializadoraCorreoComponent
+    ComercializadoraCorreoComponent,
+    CreateUsersComponent
   ],
   imports: [
     BrowserModule,

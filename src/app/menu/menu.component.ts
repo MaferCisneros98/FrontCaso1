@@ -12,11 +12,12 @@ export class MenuComponent implements OnInit {
   iscomercializadora = this.tokenService.comercializadora();
   isTaller = this.tokenService.taller();
   isConcesionaria=this.tokenService.concesionaria();
-
+  isAdmin=this.tokenService.admin();
 
   constructor(private tokenService: TokenService) { }
 
   ngOnInit() {
+    console.log(this.isAdmin)
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {

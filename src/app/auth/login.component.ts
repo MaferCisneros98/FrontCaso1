@@ -37,15 +37,15 @@ export class LoginComponent implements OnInit {
 
   onLogin(): void {
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
+    console.log(this.loginUsuario);
     this.authService.login(this.loginUsuario).subscribe(
       data => {
         this.isLogged = true;
-
         this.tokenService.setToken(data.token);
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
-        this.toastr.success('Bienvenido ' + data.nombreUsuario, 'OK', {
+        this.toastr.success('Bienvenido ' + this.nombreUsuario, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
         this.router.navigate(['/']);
